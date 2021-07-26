@@ -6,17 +6,10 @@
 Rising from the Ashes Data Model
 ================================
 
+This document explains the content model for Audio and Video objects in UTK's Rising from the Ashes Oral History project.
+
 .. toctree::
    :maxdepth: 1
    :glob:
 
    data/*
-
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
