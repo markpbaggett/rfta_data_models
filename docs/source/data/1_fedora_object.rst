@@ -20,7 +20,7 @@ Each Fedora object may have these unique datastreams.
 * TECHMD:  This is a xml document that includes technical metadata about the OBJ datastream specifically.  It is not useful for migration as Islandora only cares about capturing this for the OBJ.
 * MP4: If the content model (work type) is video, this is the access proxy.  It originates from the preservation OBJ, but includes human edited content that the preservation object does not have.  In other words, we can't generate from OBJ directly.
 * `TRANSCRIPT <5_transcripts.html>`__: All audio and videos have an attached webVTT file in English that serves as a captioning document. The intent is to allow close captioning in English and a searchable transcript.
-* `RELS-INT <6_rels_int.rst>`__: Each audio and video oral history has a RELS-INT file that states the duration of the oral history's access proxy (MP4 or Proxy_MP3).
+* `RELS-INT <6_rels_int.html>`__: Each audio and video oral history has a RELS-INT file that states the duration of the oral history's access proxy (MP4 or Proxy_MP3).
 * BIOFORM: Each oral history has a bioform.  This is important for preservation but should not be accessible to the public.
 * RELEASE: Each oral history that is public has a signed release form.  This is important for preservation but should not be accessible to the public.
 * TN: Each oral history has a machine generated thumbnail.  This is not needed.
