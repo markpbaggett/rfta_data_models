@@ -4,7 +4,8 @@ Understanding the Fedora Object
 About
 -----
 
-This page describes the unique datastreams related to a Fedora object.
+This page describes the unique datastreams related to a Fedora object. If the datastream is more than a binary and
+needs further explanation, it is hyperlinked and described in future pages.
 
 Unique Datastreams
 ------------------
@@ -15,10 +16,10 @@ Each Fedora object may have these unique datastreams.
 * `MODS <3_understanding_the_mods.html>`__: this is our source of descriptive metadata and includes information to navigate to specific portions of video.
 * DC:  this datastream is generated automatically but is not needed for migration. We do not need this in the new system.
 * OBJ: this is the preservation object regardless of its content model / work type.  We add to Fedora for preservation activities and its synced to DuraCloud.
-* POLICY
-* TECHMD
+* `POLICY <4_policy.html>`__: this is typically the file that we use to describe read and write permissions. Unlike the RELS-EXT, it's where the magic actually happens.
+* TECHMD:  This is a xml document that includes technical metadata about the OBJ datastream specifically.  It is not useful for migration as Islandora only cares about capturing this for the OBJ.
 * MP4: If the content model (work type) is video, this is the access proxy.  It originates from the preservation OBJ, but includes human edited content that the preservation object does not have.  In other words, we can't generate from OBJ directly.
-* TRANSCRIPT
+* TRANSCRIPT:
 * RELS-INT
 * BIOFORM
 * RELEASE
