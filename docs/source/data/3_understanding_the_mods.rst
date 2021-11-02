@@ -25,7 +25,7 @@ For example, the title of our object is found here:
     :lines: 9-11
 
 According to our `titleInfo mapping <https://utk-mods-to-rdf.readthedocs.io/en/latest/contents/4_draft_mapping.html#titleinfo>`_
-the text node value should be mapped to :code:`dcterms:title`:
+the text node value should be mapped to :code:`dcterms:title` in our next system:
 
 .. code-block:: turtle
 
@@ -33,7 +33,8 @@ the text node value should be mapped to :code:`dcterms:title`:
 
     <https://example.org/objects/1> dcterms:title "Interview with Seemona and Daniel Whaley, 2019-09-20" .
 
-Similarly, the abstract is here and is intended to be mapped to :code:`dcterms:abstract` according to our mapping for `this node <https://utk-mods-to-rdf.readthedocs.io/en/latest/contents/4_draft_mapping.html#abstract>`_:
+Similarly, the abstract is here and is intended to be mapped to :code:`dcterms:abstract` according to our mapping for
+`this node <https://utk-mods-to-rdf.readthedocs.io/en/latest/contents/4_draft_mapping.html#abstract>`_:
 
 .. literalinclude:: ../literals/mods.xml
     :language: xml
@@ -45,6 +46,84 @@ Similarly, the abstract is here and is intended to be mapped to :code:`dcterms:a
     @prefix dcterms: <http://purl.org/dc/terms/> .
 
     <https://example.org/objects/1> dcterms:abstract "Interview with Seemona and Daniel Whaley, former residents of Gatlinburg. The Whaley's discuss the feeling at the time before the fire had become widespread. They also go into detail about the harrowing efforts to evacuate off a mountain that wass engulfed in the fire. Reflections about community relations and how Gatlinburg began to slowly recover are also touched upon. This is a representative quote from the interview: That's where it looked like lava running up the mountain. You could see the fire going uphill." .
+
+While we maintain and MODS to RDF mapping, we also have a metadata mapping that explains how we currently translate
+our MODS to IIIF presentation v3.  It is described here:
+
+=====================
+The Metadata Property
+=====================
+
+Most metadata Elements get mapped to the `metadata <https://iiif.io/api/presentation/3.0/#metadata>`_ property in our
+manifest. These are listed here:
+
++------------------------------+------------------------------------------------------+------------------------------------------------------------------------+
+| Label                        | Presentation v3 Field                                | MODS XPath                                                             |
++==============================+======================================================+========================================================================+
+| Alternative Title            | metadata.[i].label.en.0."Alternative Title"          | titleInfo[@type="alternative"]'                                        |
++------------------------------+------------------------------------------------------+------------------------------------------------------------------------+
+| Table of Contents            | metadata.[i].label.en.0."Table of Contents"          | tableOfContents                                                        |
++------------------------------+------------------------------------------------------+------------------------------------------------------------------------+
+| Creators and Contributors    | metadata.[i].label.en.0."Creators and Contributors"  | name/namePart                                                          |
++------------------------------+------------------------------------------------------+------------------------------------------------------------------------+
+| Publisher                    | metadata.[i].label.en.0."Publisher"                  | originInfo/publisher                                                   |
++------------------------------+------------------------------------------------------+------------------------------------------------------------------------+
+| Date                         | metadata.[i].label.en.0."Date"                       | originInfo/dateCreated | originInfo/dateOther                          |
++------------------------------+------------------------------------------------------+------------------------------------------------------------------------+
+| Publication Date             | metadata.[i].label.en.0."Publication Date"           | originInfo/dateIssued                                                  |
++------------------------------+------------------------------------------------------+------------------------------------------------------------------------+
+| Format                       | metadata.[i].label.en.0."Format"                     | physicalDescription/form[not(@type="material")]                        |
++------------------------------+------------------------------------------------------+------------------------------------------------------------------------+
+| Extent                       | metadata.[i].label.en.0."Extent"                     | physicalDescription/extent                                             |
++------------------------------+------------------------------------------------------+------------------------------------------------------------------------+
+| Subject                      | metadata.[i].label.en.0."Subject"                    | subject[not(@displayLabel="Narrator Class")]/topic                     |
++------------------------------+------------------------------------------------------+------------------------------------------------------------------------+
+| Narrator Role                | metadata.[i].label.en.0."Narrator Role"              | subject[@displayLabel="Narrator Class"]/topic                          |
++------------------------------+------------------------------------------------------+------------------------------------------------------------------------+
+| Place                        | metadata.[i].label.en.0."Place"                      | subject/geographic                                                     |
++------------------------------+------------------------------------------------------+------------------------------------------------------------------------+
+| Time Period                  | metadata.[i].label.en.0."Time Period"                | subject/temporal                                                       |
++------------------------------+------------------------------------------------------+------------------------------------------------------------------------+
+| Publication Identifier       | metadata.[i].label.en.0."Publication Identifier"     | identifier[@type="isbn"] | identifier[@type="issn"]                    |
++------------------------------+------------------------------------------------------+------------------------------------------------------------------------+
+| Description                  | metadata.[i].label.en.0."Description"                | abstract[not(@lang)]                                                   |
++------------------------------+------------------------------------------------------+------------------------------------------------------------------------+
+| Descripción                  | metadata.[i].label.es.0."Descripción"                | abstract[@lang="spa"]                                                  |
++------------------------------+------------------------------------------------------+------------------------------------------------------------------------+
+| Título                       | metadata.[i].label.es.0."Título"                     | titleInfo[@lang="spa"]/title                                           |
++------------------------------+------------------------------------------------------+------------------------------------------------------------------------+
+| [Role of a Person to a Work] | metadata.[i].label.en.0.[Role of a Person to a Work] | mods:name[mods:role[mods:roleTerm[text()='{$current}']]]/mods:namePart |
++------------------------------+------------------------------------------------------+------------------------------------------------------------------------+
+
+Most of those are straight forward, but there are a few things to note.
+
+Two elements get mapped with a Spanish language code rather than English:
+
+* Descripción
+* Título
+
+We have many role terms that we use in our repository.  In RFTA, currently we only have an `Interviewer` and an `Interviewee`.
+If this was to expand those names would be stored in a unique field according to the role of the person and their
+relationship to the work.
+
+================
+Other Properties
+================
+
+There are other metadata elements that are stored outside the metadata property.  Those are:
+
++-------------+-------------------------------+-------------------------------------------------+
+| Label       | Presentation v3 Field         | XPath                                           |
++=============+===============================+=================================================+
+| Label       | label.en[0]                   | titleInfo[not(@type="alternative")][not(@lang)] |
++-------------+-------------------------------+-------------------------------------------------+
+| Summary     | summary.en[0]                 | abstract[not(@lang)]                            |
++-------------+-------------------------------+-------------------------------------------------+
+| Rights      | rights                        | accessCondition[@xlink:href]                    |
++-------------+-------------------------------+-------------------------------------------------+
+| Provided by | requiredStatement.label.en[0] | recordInfo/recordContentSource                  |
++-------------+-------------------------------+-------------------------------------------------+
+
 
 Structures, Ranges, and Additional Expectations
 -----------------------------------------------
