@@ -4,7 +4,8 @@ RELS-EXT Datastream
 About
 -----
 
-The RELS-EXT datastream is serialized as rdf/xml and looks like something like this:
+The RELS-EXT datastream describes each oral history and its relationship to other objects in our repository. It is
+serialized as rdf/xml and looks like something like this:
 
 .. code-block:: xml
 
@@ -110,8 +111,9 @@ This is handled by the RELS-EXT in line six and interpreted by our web applicati
 Parts that Should Not Matter for Migration
 ------------------------------------------
 
-While we currently have the objects, we are restricting them from access.  This is done with the POLICY datastream, but
-there are also triples here that help explain whats in the POLICY:
+While we currently have the objects, we are restricting them from access.  This is done with the POLICY datastream.
+Unfortunately, Islandora, our current respository, adds triples that describe the policy when its created but it doesn't
+modify these when the POLICY is changed or removed.  Because of this, we consider these triples inaccurate and misleading.
 
 .. code-block:: turtle
     :linenos:
