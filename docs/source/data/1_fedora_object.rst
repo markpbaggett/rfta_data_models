@@ -4,8 +4,8 @@ Understanding the Fedora Object
 About
 -----
 
-This page describes the unique datastreams related to a Fedora object. If the datastream is more than a binary and
-needs further explanation, it is hyperlinked and described in future pages.
+This page describes the content model of an RFTA oral history and the  unique datastreams related to each Fedora object.
+If the datastream is more than a binary and needs further explanation, it is hyperlinked and described in future pages.
 
 Unique Datastreams
 ------------------
