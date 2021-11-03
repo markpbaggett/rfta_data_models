@@ -137,7 +137,8 @@ This is this section of the MODS:
 
 There is a lot going on here, but this will explain the original intention so that we can discuss potential options.
 
-First, it's important to note that we were originally intended to serve this collection following the `IIIF Presentation v3 specification <https://iiif.io/api/presentation/3.0/>`_.
+First, it's important to note that we set out to deliver this collection following the
+`IIIF Presentation v3 specification <https://iiif.io/api/presentation/3.0/>`_.
 
 The data team had gone threw each video and divided it into at least one, but sometimes two, ranges. Each range had
 sections that related to a timestamp or set of timestamps. To make use of the data creations team's sectioning of videos,
@@ -149,6 +150,10 @@ in the new version of Universal Viewer.
 .. image:: ../images/sample_rfta_range.png
 
 You can see that when you click the index, you have actionable anchors that forward you to the correct part of the video.
+
+The same can be said about the Viewer in our application, `canopy <https://github.com/utkdigitalinitiatives/canopy/>`_.
+
+.. image:: ../images/canopy_viewer.png
 
 The interview questions section gets populated into our manifest like so:
 
