@@ -10,6 +10,8 @@ This document explains the content model for Audio and Video objects in UTK's Ri
 
 .. toctree::
    :maxdepth: 1
+   :numbered:
+   :caption: Table of Contents
    :glob:
 
    data/*
