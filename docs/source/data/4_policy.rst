@@ -4,9 +4,14 @@ Understanding XACML Policies
 About
 -----
 
-Each oral history an attached :code:`POLICY` binary.  This file is based on the
-`XACML 1.0 <https://www.oasis-open.org/committees/download.php/2406/oasis-xacml-1.0.pdf>`_ specification.  This section
-describes how to interpret our :code:`POLICY` binaries and what information is meaningful for migration.
+Each oral history may have an attached :code:`POLICY` binary.  This file is based on the
+`XACML 1.0 <https://www.oasis-open.org/committees/download.php/2406/oasis-xacml-1.0.pdf>`_ specification.
+
+These :code:`POLICY` datastreams are important in that they are technically what handles restrictions in our current
+system. Early on in the project, the datastream was used to to restrict access to everything, but over time some objects
+were released to public view while they continued to have restrictions on the management of the resource.
+
+This section describes how to interpret our :code:`POLICY` datastreams and what information is meaningful for migration.
 
 Deny Management Functions
 -------------------------
