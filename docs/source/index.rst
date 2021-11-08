@@ -10,8 +10,8 @@ This document contains technical documentation related to the delivery of the Ri
 Wildfires Collection.
 
 Included in the docs are descriptions of the content model of each oral history, metadata mappings, restrictions to
-access, IIIF generation with [iiif assemble](https://github.com/utkdigitalinitiatives/iiif_assemble), and delivery with
-[canopy](https://github.com/utkdigitalinitiatives/canopy).
+access, IIIF generation with `iiif assemble <https://github.com/utkdigitalinitiatives/iiif_assemble>`_, and delivery with
+`canopy <https://github.com/utkdigitalinitiatives/canopy>`_.
 
 .. toctree::
    :maxdepth: 1
