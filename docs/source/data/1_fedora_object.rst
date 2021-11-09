@@ -4,7 +4,9 @@ Understanding the Fedora Object
 About
 -----
 
-This page describes the content model of an RFTA oral history and the  unique datastreams related to each Fedora object.
+All objects related to RFTA are managed in a Fedora 3.8.1 repository with Islandora 7.
+
+This page describes the content model of an RFTA oral history and the unique datastreams related to each Fedora object.
 If the datastream is more than a binary and needs further explanation, it is hyperlinked and described in future pages.
 
 Unique Datastreams

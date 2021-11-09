@@ -1,5 +1,5 @@
-Understanding XACML Policies
-============================
+Restricted Access and XACML
+===========================
 
 About
 -----

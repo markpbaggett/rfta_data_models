@@ -1,5 +1,5 @@
-MODS Datastream
-===============
+Descriptive Metadata & MODS
+===========================
 
 About
 -----

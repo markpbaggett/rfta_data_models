@@ -1,10 +1,11 @@
-RELS-INT Datastream
-===================
+Internal Relationships and RELS-INT
+===================================
 
 About
 -----
 
-Each Oral History has a bit of RDF serialized as rdf/xml that descibes the duration of the access proxy.
+Each Oral History has a bit of RDF serialized as rdf/xml that descibes the duration of the access proxy. It is available
+in the :code:`RELS-INT` datastream.
 
 Here is an example:
 
