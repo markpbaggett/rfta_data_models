@@ -30,6 +30,11 @@ You can see that the canvas has a `W3C Web Annotation <https://www.w3.org/TR/ann
 captions in English targetting the canvas. It has a motivation of supplmenting to suggest that it can be optionally
 rendered by the viewer.
 
+It is important to note that Presentation v3 states that only annotations with the motivation of :code:`painting` can be
+included in the :code:`items` property.  All others must be in the :code:`annotations` property.  This is an issue in
+our current implementation of `iiif_assemble <https://github.com/utkdigitalinitiatives/iiif_assemble>`_ and
+`canopy <https://github.com/utkdigitalinitiatives/canopy/>`_ and must be corrected in our next system.
+
 This is unlike the Annotation that paints the actual audio or video to the viewer since it should always be displayed.
 
 .. literalinclude:: ../literals/rfta_video.json
