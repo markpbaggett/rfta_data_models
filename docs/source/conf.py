@@ -18,9 +18,8 @@ import sphinx_rtd_theme
 
 # -- Project information -----------------------------------------------------
 
-project = 'Rising from the Ashes Oral Histories Data Model'
-copyright = '2021, Mark Baggett'
-author = 'Mark Baggett'
+project = 'Rising from the Ashes Technical Documentation'
+author = 'UT Libraries Digital Initiatives'
 
 
 # -- General configuration ---------------------------------------------------
