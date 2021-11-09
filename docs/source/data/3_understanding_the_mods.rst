@@ -15,6 +15,10 @@ A sample MODS record is included here:
 Descriptive Metadata
 --------------------
 
+============
+MODS and RDF
+============
+
 Most of our MODS files are used for descriptive metadata only.
 
 For example, the title of our object is found here:
