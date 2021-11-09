@@ -40,7 +40,7 @@ The application can be updated with :code:`sudo git pull`.
 Running Assemble in Development
 -------------------------------
 
-Assemble can be run in the `utk_digital vagrant box https://github.com/utkdigitalinitiatives/utk_digital>`_. To do this,
+Assemble can be run in the `utk_digital vagrant box <https://github.com/utkdigitalinitiatives/utk_digital>`_. To do this,
 you must follow the instructions in the README of that repo.
 
 There is one catch.  Audio and Video content models are expected to have durations.  You'll need to add a duration with
@@ -48,6 +48,25 @@ API-M to get this to work as expected.  See the RELS-INT section of these docs f
 
 Assemble and RFTA
 -----------------
+
+=========================
+Audio and Video Manifests
+=========================
+
+IIIF assemble builds a Presentation v3 manifest for each object in RFTA. The metadata model follows the default for all
+other content except in a few ways.
+
+Since this is timebased, the manifest has a :code:`duration` property that is generated from an expected
+:code:`bibframe:duration` property in the RELS-INT that refers to the access datastream.
+
+The other differences are described in corresponding sections below (structures and ranges).
+
+====================
+Collection Manifests
+====================
+
+Canopy, our platform for serving things, needs a presentation manifest for the collection object.  This application
+builds that using its `collection module <https://github.com/utkdigitalinitiatives/iiif_assemble/blob/main/src/Collection.php>`_.
 
 =====================
 The Metadata Property
