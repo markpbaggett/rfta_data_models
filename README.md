@@ -2,7 +2,8 @@
 
 [![Documentation Status](https://readthedocs.org/projects/rfta-data-models/badge/?version=latest)](https://rfta-data-models.readthedocs.io/en/latest/?badge=latest)
 
-This document includes information regarding the delivery of Rising from the Ashes: Chimney Tops 2 Wildfire project.
+[This site](https://rfta-data-models.readthedocs.io/en/latest/) includes information regarding the delivery of the Rising 
+from the Ashes: Chimney Tops 2 Wildfire project.
 
 This documentation serves three unique audiences:
 
