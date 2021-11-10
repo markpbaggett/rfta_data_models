@@ -127,7 +127,7 @@ relationship to the work.
 You can read more about how this is done in the Manifest module and the :code:`IIIF::buildMetadata()` method of
 `iiif_assemble <https://github.com/utkdigitalinitiatives/iiif_assemble/blob/8d0c059c95826cb0f43fbdfb6cbf04b3db83b74e/src/IIIF.php#L91>`_.
 
-.. code-block:: PHP
+.. code-block:: php
 
 
     public function buildMetadata () {
@@ -172,7 +172,7 @@ There are other metadata elements that are stored outside the metadata property.
 You can read more about this in the Manifest module and the :code:`IIIF::buildManifest()` method of
 `iiif_assemble <https://github.com/utkdigitalinitiatives/iiif_assemble/blob/8d0c059c95826cb0f43fbdfb6cbf04b3db83b74e/src/IIIF.php#L64>`_.
 
-.. code-block:: PHP
+.. code-block:: php
 
     public function buildManifest ()
     {
