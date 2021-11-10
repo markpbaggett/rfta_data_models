@@ -39,3 +39,11 @@ Canopy is the `branch` and presents our objects to the outside world.
 The Canopy Stack
 ----------------
 
+Canopy is a `Jamstack <https://jamstack.org/>`_ built with Gatsby, React, HTML 5, GraphQL, Lunr, and IIIF presentation v3.
+The application has a config file that generates a site from `IIIF Presentation v3 collection manifest
+<https://github.com/utkdigitalinitiatives/canopy/blob/f44316878c27436d209b7c118b1f7a92d8691cfc/gatsby-node.js#L13>`_.
+
+When the site is `"built"`, each manifest mentioned in that manifest is indexed in the stacks GraphQL and Lunr index.
+Static HTML pages are created and cached from the build process for performance reasons.
+
+Canopy defines many components that leverage aspects from these manifests. These are described below:
