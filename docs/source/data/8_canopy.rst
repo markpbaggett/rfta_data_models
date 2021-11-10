@@ -51,7 +51,7 @@ thumbnail, etc. and stores that data with Lunr and the Gatsby GraphQL endpoint. 
 can see the current build `here <https://iiif-canopy.netlify.app/>`_. This is still being actively worked on and is
 subject to change.
 
-Canopy defines many components that leverage aspects from these manifests. These are described below:
+Canopy defines many components that leverage aspects from these manifests.
 
 The Object View
 ---------------
