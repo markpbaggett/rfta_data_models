@@ -98,6 +98,8 @@ manifest. These are listed here:
 +------------------------------+------------------------------------------------------+------------------------------------------------------------------------+
 | [Role of a Person to a Work] | metadata.[i].label.en.0.[Role of a Person to a Work] | mods:name[mods:role[mods:roleTerm[text()='{$current}']]]/mods:namePart |
 +------------------------------+------------------------------------------------------+------------------------------------------------------------------------+
+| Browse                       | metadata.[i].label.en.0.Browse                       | note[@displayLabel="Browse"]                                           |
++------------------------------+------------------------------------------------------+------------------------------------------------------------------------+
 
 Most of those are straight forward, but there are a few things to note.
 
